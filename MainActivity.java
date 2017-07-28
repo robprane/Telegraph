@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActionMode.Callback actionModeCallback;
     private EditText editText;
+    private EditText editName;
     private Button publishButton;
 
     @Override
@@ -94,10 +95,12 @@ public class MainActivity extends AppCompatActivity {
         };
 
         editText = (EditText) findViewById(R.id.editText);
+        editName = (EditText) findViewById(R.id.editName);
 
         publishButton = (Button) findViewById(R.id.publishButton);
 
         editText.setCustomSelectionActionModeCallback(actionModeCallback);
+        editName.setCustomSelectionActionModeCallback(actionModeCallback);
 
         editText.setHorizontallyScrolling(false);
         editText.setMaxLines(Integer.MAX_VALUE);
